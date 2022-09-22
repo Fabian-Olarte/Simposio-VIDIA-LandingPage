@@ -1,0 +1,664 @@
+//Variables
+$primary-color: #4B73FF
+$secundary-color: #112236
+$title-weight: 700
+$text-weight: 300
+
+//Shadows
+$shadow: 0px 0.5px 0.6px hsl(0deg 0% 62% / 0.3),0px 1.4px 1.6px -0.6px hsl(0deg 0% 62% / 0.3),0px 2.8px 3.1px -1.3px hsl(0deg 0% 62% / 0.29),0.1px 5.6px 6.2px -1.9px hsl(0deg 0% 62% / 0.29),0.2px 10.8px 12px -2.6px hsl(0deg 0% 62% / 0.28)
+  
+//Mixins
+@mixin style-buttom($border-r, $font-size) 
+    color: white
+    padding: 1em
+    border-radius: $border-r
+    text-decoration: none
+    transition: all 0.5s
+    font-size: $font-size
+    display: block
+    margin: 0px auto
+    &:hover
+        transform: scale(1.03)
+        box-shadow: 2px 2px 3px #ccc
+
+@mixin gradient-background-blue
+    background: linear-gradient(220.55deg, #4de3ee 0%, #4B73FF 100%)
+
+@mixin gradient-background-green
+   background: linear-gradient(220.55deg, #6dffb8 0%, #2b9863 100%)
+
+@mixin gradient-background-home
+    background: linear-gradient(90deg, rgba(219, 245, 255, 0.7) 0%, rgba(255, 255, 255, 0.7) 100%)
+  
+@mixin cardTeam
+    background-color: #ffffff
+    color: black
+    height: 300px
+    border-radius: 10px
+    transition: all 0.8s
+    margin: 20px
+    box-shadow: $shadow
+    border: 1px solid #cccccca0
+
+@mixin flex-center
+    display: flex
+    align-items: center
+    justify-content: center
+
+//Imports
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;1,100;1,300&display=swap')
+
+//General Styles
+*
+    font-family: 'Roboto', sans-serif
+    font-size: 10px
+
+//Main Styles
+#header 
+    box-shadow: $shadow
+    height: 95px
+    position: fixed
+    top: 0
+    left: 0
+    width:100%
+    z-index: 10
+    transition: all 0.2s
+
+    .container-layout
+        max-width: 1328px
+        height: 100%
+
+        .row
+            height: 100%
+                   
+            #icon-layout-javeriana 
+                @include flex-center
+                padding: 0px
+                      
+                #icon-javeriana 
+                    width: 100%
+                     
+            #menu          
+                ul 
+                    width: 100%
+                    @include flex-center
+                    padding: 0px
+                    margin: 0px
+                    list-style: none
+      
+                    li 
+                        text-align: center
+                        cursor: pointer
+                    
+                        
+                        a 
+                            text-decoration: none
+                            color: #8A8A8A 
+                            font-size: 1.7em
+                            font-weight: $text-weight
+                            transition: all 0.2s
+
+                            &:hover
+                                color: #000000
+                                font-size: 1.75em
+
+            #button-register 
+                @include flex-center
+             
+                #button   
+                    @include style-buttom(10px, 2em)
+                    padding-top: 0.7em
+                    padding-bottom: 0.7em
+                    @include gradient-background-blue
+            
+
+#general
+    margin-top: 95px
+  
+    #inicio 
+        @include gradient-background-home
+     
+        .container-layout
+            max-width: 1328px        
+            height: auto
+            margin: 0px auto
+
+            #information      
+                #title-layout
+                    width: 100%
+                    padding-bottom: 20px
+                    
+                    #title 
+                        width: 50%
+                        padding: 0px
+                        color: #000000
+                        font-size: 11.5em
+                        font-weight: $title-weight     
+                        line-height: 1em
+
+                        span 
+                            color: #0f3561
+                            font-size: 1.2em
+                                  
+                #description-layout
+                    width: 100%
+                    text-align: justify
+                    
+                    #description 
+                        width: 90%                
+                        font-size: 2.2em
+                        font-weight: $text-weight
+                        line-height: 1.5em
+                    
+                    #date 
+                        padding-top: 5%
+                        text-align: center
+                        font-size: 2.5em
+                        font-weight: 500
+                                   
+                #button-layout
+                    width: 100%
+                    padding-top: 30px
+
+                    #button-register-layout 
+                        padding-bottom: 5%
+                        text-align: center  
+
+                        #button-register         
+                            @include style-buttom(10px, 2.5em)
+                            @include gradient-background-blue
+                                    
+                    #button-moreInfo-layout 
+                        text-align: center  
+
+                        #button-moreInfo
+                            @include gradient-background-green 
+                            @include style-buttom(10px, 2.5em)
+
+
+            #icon-main-layout
+                @include flex-center
+
+                #icon-main
+                    width: 95%
+                    
+
+    #informacion 
+        background-color: #ffffff
+
+        .container-layout 
+            max-width: 1300px
+            height: auto
+            margin: 0px auto
+                 
+            #main-layout
+                #title-layout     
+                    #title     
+                        text-align: center
+                        font-size: 4em
+                        font-weight: $title-weight
+                    
+                        span
+                            font-size: 1em
+                            color: #0f3561
+
+                #button-layout
+                    margin-top: 30%
+               
+                    #button-speakers-layout
+                        text-align: center
+                        padding: 0px
+                        margin: 0px auto
+
+                        #button-speakers 
+                            @include style-buttom(10px, 2.2em)
+                            @include gradient-background-green
+               
+
+            #description-layout           
+                #description
+                    font-size: 2.5em
+                    font-weight: $text-weight
+                    text-align: justify
+                
+
+        #footer-information-layout
+            background: #112236
+            height: auto
+
+            #footer-icon-layout
+                margin: 0px auto
+                height: 100%
+             
+                #icon-layout
+                    padding-top: 20px
+                    padding-bottom: 20px
+                    
+                    #icon-javeriana-layout
+                        text-align: end
+                        padding-right: 25px
+                        border-right: 2px solid #8d8d8d
+
+                        #icon-javeriana 
+                            width: 25%
+                            filter: invert(100%)
+                        
+                    #icon-main-layout
+                        padding-left: 25px
+                        text-align: start
+
+                        #icon-main 
+                            width: 35%
+
+
+    #invitados
+        background-color: white
+   
+        .container-layout
+            max-width: 1328px     
+            margin: 0px auto
+    
+            #title-layout
+                text-align: center
+                color: #000000
+
+                #title
+                    font-size: 5em
+                    font-weight: $title-weight
+
+            #speakers-layout
+                padding-top: 5vh
+                
+                .card-container
+                    padding: 0px
+                    height: 65em
+                    width: 40em
+
+                    .card
+                        position: relative
+                        width: 100%
+                        height: 100%
+                        border: none
+                                    
+                        .f
+                            width: 100%
+                            height: 100%
+                            position: absolute
+                            background-color: white
+                            backface-visibility: hidden               
+                            overflow: hidden
+                            transition: 0.5s
+                            border-radius: 5px
+                            box-shadow: $shadow
+                            border: 1px solid #cccccc66
+                            
+                        
+                        .front   
+                            text-align: center   
+
+                            img
+                                width: 100%
+                                height: 65%
+                             
+                            .card-body
+                                padding-top: 3%
+                              
+                                .card-title
+                                    font-size: 2.1em
+                                
+                                .card-text
+                                    padding-top: 6px
+                                    color: #959595
+                                    font-weight: 500
+                                    font-size: 1.8em
+                                
+                                .more-info
+                                    width: 100%
+                                    height: 12%
+                                    margin: 0px
+                                    @include flex-center
+                                    position: absolute
+                                    right: 0vw
+                                    bottom: 0vh
+                                    border-top: 1px solid #e1e1e1
+                                    transition: all 0.7s
+
+                                    p
+                                        margin: 0px
+                                        text-align: center                          
+                                        font-weight: 300
+                                        font-size: 1.5em
+                                        color: gray
+
+                                    span
+                                        color: gray
+                                        padding-right: 10px
+
+                                    &:hover
+                                        cursor: pointer
+                                        background: $secundary-color
+                                        p
+                                            transform: scale(1.1)
+                                            color: white
+                                        
+                                        span
+                                            transform: scale(1.1)
+                                            color: white
+                                            padding-right: 15px
+                      
+                                            
+                            transform: perspective(600px) rotateY(0deg)
+                     
+                        .back                  
+                            background-color: $secundary-color
+                            color: white
+                            box-shadow: $shadow
+
+                            .card-back-body
+                                padding: 5%
+                                padding-top: 8%
+                    
+
+                                .card-title
+                                    text-align: center
+                                    font-size: 2em
+                                    font-weight: 500
+                                
+                                ul
+                                    padding: 5%
+                                    padding-top: 2%
+                                    text-align: start
+                                    li
+                                        font-size: 1.4em
+                                        font-weight: $text-weight
+
+                                .more-info
+                                    width: 100%
+                                    height: 12%
+                                    margin: 0px
+                                    @include flex-center
+                                    position: absolute
+                                    right: 0vw
+                                    bottom: 0vh
+                                    border-top: 1px solid #e1e1e1
+                                    transition: all 0.7s
+
+                                    p
+                                        margin: 0px
+                                        text-align: center                          
+                                        font-weight: 300
+                                        font-size: 1.5em
+                                        color: gray
+
+                                    span
+                                        color: gray
+                                        padding-right: 10px
+
+                                    &:hover
+                                        cursor: pointer
+                                        background: $secundary-color
+                                        p
+                                            transform: scale(1.1)
+                                            color: white
+                                        
+                                        span
+                                            transform: scale(1.1)
+                                            color: white
+                                            padding-right: 15px
+                                 
+                                
+                            transform: perspective(600px) rotateY(180deg)   
+
+    
+                        .rotate
+                            .front
+                                transform: perspective(600px) rotateY(180deg)
+                        
+                            .back
+                                transform: perspective(600px) rotateY(360deg)  
+
+
+    #cronograma
+        background-color: #112236
+        color: white
+
+        .container-layout
+            max-width: 1328px
+            margin: 0px auto
+
+            #title-layout
+                text-align: center
+                
+                #title
+                    font-size: 4em
+                    font-weight: $title-weight  
+            
+            #activities-layout       
+                .activity-layout
+                    padding-top: 4vh
+
+                    .date
+                        font-size: 1.6em
+                        font-weight: 400
+                    
+                    .name-activity
+                        font-size: 2.5em
+                        font-weight: 600
+                    
+                    .description
+                        font-size: 1.8em
+                        font-weight: 200
+
+
+    #equipos
+        background: white 
+        height: auto
+        
+
+        .container-layout
+            max-width: 1328px
+            height: 100%
+            margin: 0px auto
+            padding: 0px
+
+            #title-layout
+                color: black
+                
+                #title
+                    font-size: 5em
+
+            .main-layout
+                display: grid
+                grid-template-columns: 1fr 1fr 1fr
+                grid-template-rows: 1fr 1fr 
+                align-items: center
+                transition: all 300ms
+                grid-auto-flow: dense
+                transition: all 2s
+           
+                .card-team
+                    @include cardTeam
+                    grid-column: span 1
+                    grid-row: span 1
+                    transition: all 0.5s
+                    overflow: hidden
+                    max-height: 650px 
+                    min-height: 100px
+                          
+                    .front
+                        display: flex
+                        width: 100%
+                        height: 100%
+                        flex-direction: column
+                        align-items: center
+                        justify-content: space-around
+                        padding-top: 5%
+
+                        .icon-front
+                            width: 40%
+                              
+                        .title-front
+                            font-size: 2.5em
+
+
+                    .back
+                        width: 100%
+                        height: 100%
+                        
+
+                        .title-back
+                            text-align: center
+                            font-size: 2.5em
+                            padding-top: 3%
+                            font-weight: 500
+                           
+                        .members-layout
+                            padding-top: 5%
+                            height: 80%
+                            margin: 5%
+                            margin-top: 0%
+
+                            .row
+                                padding-bottom: 3.5%
+                                                           
+                            .member
+                                padding-bottom: 5vh
+                                text-align: center
+                                flex-basis: 28%
+
+                                .member-img
+                                    width: 80%
+                                    height: 90%
+                                    border-radius: 20px
+                                    
+                                .member-name
+                                    font-size: 1.8em
+                                    font-weight: 200
+                          
+                    &:hover
+                        transform: scale(1.02)
+
+                                                             
+                .card-team-expanded
+                    @include cardTeam
+                    grid-column: span 2
+                    grid-row: span 2
+                    height: 95%
+                    min-height: 230px
+                  
+                  
+
+                .card-team-expanded2
+                    @include cardTeam
+                    grid-column: 2/4
+                    grid-row: 2/4
+                    height: 95%
+                    min-height: 230px
+                   
+
+
+    #registro
+        height: auto 
+        
+        .container-layout
+            max-width: 1328px
+            margin: 0px auto
+      
+            #title-layout
+                text-align: center
+
+                #title
+                    font-size: 4em
+            
+            #main-layout         
+                #button-register-layout
+                    text-align: center
+                    align-self: center
+
+                    #button-register
+                        font-size: 2em
+                        @include style-buttom(10px, 2em)
+                        width: 35%
+                        @include gradient-background-blue
+
+
+                #icon-layout
+
+                    #icon-javeriana-layout
+                        border-right: 1px solid gray
+                        text-align: end    
+                        padding-right: 25px
+                        
+                        #icon-javeriana
+                            width: 60%
+
+
+                    #icon-main-layout
+                        padding-left: 25px
+                        #icon-main
+                            width: 83%
+
+
+#footer
+    height: auto
+    background-color: #112236
+
+    .container-layout
+        max-width: 1328px
+        margin: 0px auto
+            
+        #information-layout
+            margin: 0px auto
+            color: white
+
+            .title
+                font-size: 2.5em
+                text-align: center
+            
+            .description
+                margin: 0px auto
+                width: 90%
+                padding-top: 10px
+                text-align: justify
+                font-weight: 100
+                font-size: 1.7em
+            
+        
+        #social-networks-layout
+            margin: 0px auto
+            color: white
+
+            .title
+                text-align: center
+                font-size: 2.5em
+
+            .icon-social-networks-layout
+               
+
+                .icon
+                    text-align: center
+                    color: white
+
+                    svg
+                        width: 40%
+                        height: 100%
+
+                #icon-instagram
+                    &:hover
+                        color: #FB3269
+
+                #icon-facebook
+                    &:hover
+                        color: #166AE3 
+
+
+//Classes
+.scroll-up
+    transform: translateY(-100%)
+
+.scroll-down
+    top: 0
+    background: white
+
+
+@import 'Responsive_MediaQueries'
