@@ -53,6 +53,8 @@ $shadow: 0px 0.5px 0.6px hsl(0deg 0% 62% / 0.3),0px 1.4px 1.6px -0.6px hsl(0deg 
     font-family: 'Roboto', sans-serif
     font-size: 10px
 
+
+
 //Main Styles
 #header 
     box-shadow: $shadow
@@ -560,7 +562,12 @@ $shadow: 0px 0.5px 0.6px hsl(0deg 0% 62% / 0.3),0px 1.4px 1.6px -0.6px hsl(0deg 
 
     #registro
         height: auto 
-        
+        .times
+            @include flex-center
+            .numbers
+                font-size: 75px
+                margin-left: 5%
+
         .container-layout
             max-width: 1328px
             margin: 0px auto
@@ -598,7 +605,7 @@ $shadow: 0px 0.5px 0.6px hsl(0deg 0% 62% / 0.3),0px 1.4px 1.6px -0.6px hsl(0deg 
                         padding-left: 25px
                         #icon-main
                             width: 83%
-
+        
 
 #footer
     height: auto

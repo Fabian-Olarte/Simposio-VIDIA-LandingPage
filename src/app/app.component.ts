@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,8 +6,46 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 
-export class AppComponent {
+export class AppComponent implements AfterViewInit{
   title = 'landingPage';
+
+  cDateMillisecs: any;
+  tDateMillisecs: any;
+  currentDate: any;
+  targetDate: any;
+  difference: any;
+  seconds: any;
+  minutes: any;
+  hours: any;
+  days: any;  
+
+  myTimer() {
+    this.currentDate = new Date();
+    this.targetDate = new Date(2022, 9, 19);
+    this.cDateMillisecs = this.currentDate.getTime();
+    this.tDateMillisecs = this.targetDate.getTime();
+    this.difference = this.tDateMillisecs - this.cDateMillisecs;
+    this.seconds = Math.floor(this.difference / 1000);
+    this.minutes = Math.floor(this.seconds / 60);
+    this.hours = Math.floor(this.minutes / 60);
+    this.days = Math.floor(this.hours / 24);
+
+    this.hours %= 24;
+    this.minutes %= 60;
+    this.seconds %= 60;
+    this.hours = this.hours < 10 ? '0' + this.hours : this.hours;
+    this.minutes = this.minutes < 10 ? '0' + this.minutes : this.minutes;
+    this.seconds = this.seconds < 10 ? '0' + this.seconds : this.seconds;
+
+    document.getElementById('days')!.innerText = this.days +" dias ";
+    document.getElementById('hours')!.innerText = this.hours +"H ";
+    document.getElementById('mins')!.innerText = this.minutes +"M ";
+    document.getElementById('seconds')!.innerText = this.seconds +"S ";
+
+    setInterval(this.myTimer, 1000);
+  }
+
+
 
   ngOnInit(){
     localStorage.setItem('idAnt', 'nulo');
@@ -50,7 +88,11 @@ export class AppComponent {
     });
   }
 
-  
+  ngAfterViewInit() {
+    this.myTimer();
+  }
+
+
   toggleMenu(){
     let menu = document.getElementById('menu-mobile') as HTMLElement;
     let header = document.getElementById('header') as HTMLElement;
