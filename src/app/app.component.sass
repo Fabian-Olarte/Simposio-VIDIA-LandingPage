@@ -92,7 +92,6 @@ $shadow: 0px 0.5px 0.6px hsl(0deg 0% 62% / 0.3),0px 1.4px 1.6px -0.6px hsl(0deg 
                         text-align: center
                         cursor: pointer
                     
-                        
                         a 
                             text-decoration: none
                             color: #8A8A8A 
@@ -108,7 +107,7 @@ $shadow: 0px 0.5px 0.6px hsl(0deg 0% 62% / 0.3),0px 1.4px 1.6px -0.6px hsl(0deg 
                 @include flex-center
              
                 #button   
-                    @include style-buttom(10px, 2em)
+                    @include style-buttom(10px, 1.85em)
                     padding-top: 0.7em
                     padding-bottom: 0.7em
                     @include gradient-background-blue
@@ -313,6 +312,10 @@ $shadow: 0px 0.5px 0.6px hsl(0deg 0% 62% / 0.3),0px 1.4px 1.6px -0.6px hsl(0deg 
                                     color: #959595
                                     font-weight: 500
                                     font-size: 1.8em
+
+                                    a
+                                        font-size: 1em
+                                        color: #4d4997
                                 
                                 .more-info
                                     width: 100%
@@ -371,8 +374,13 @@ $shadow: 0px 0.5px 0.6px hsl(0deg 0% 62% / 0.3),0px 1.4px 1.6px -0.6px hsl(0deg 
                                     padding-top: 2%
                                     text-align: start
                                     li
-                                        font-size: 1.4em
+                                        font-size: 1.7em
                                         font-weight: $text-weight
+
+                                        a
+                                            font-size: 1em
+                                            color: #ccc
+
 
                                 .more-info
                                     width: 100%
@@ -440,16 +448,17 @@ $shadow: 0px 0.5px 0.6px hsl(0deg 0% 62% / 0.3),0px 1.4px 1.6px -0.6px hsl(0deg 
                     padding-top: 4vh
 
                     .date
-                        font-size: 1.6em
+                        font-size: 1.7em
                         font-weight: 400
                     
                     .name-activity
-                        font-size: 2.5em
-                        font-weight: 600
+                        text-align: justify
+                        font-size: 2.3em
+                        font-weight: 700
                     
                     .description
-                        font-size: 1.8em
-                        font-weight: 200
+                        font-size: 2.2em
+                        font-weight: 300
 
 
     #equipos
@@ -561,11 +570,6 @@ $shadow: 0px 0.5px 0.6px hsl(0deg 0% 62% / 0.3),0px 1.4px 1.6px -0.6px hsl(0deg 
 
     #registro
         height: auto 
-        .times
-            @include flex-center
-            .numbers
-                font-size: 75px
-                margin-left: 5%
 
         .container-layout
             max-width: 1328px
@@ -575,9 +579,37 @@ $shadow: 0px 0.5px 0.6px hsl(0deg 0% 62% / 0.3),0px 1.4px 1.6px -0.6px hsl(0deg 
                 text-align: center
 
                 #title
-                    font-size: 4em
+                    font-size: 5em
             
-            #main-layout         
+            #registro-info
+                p
+                    font-size: 2.2em
+                    text-align: center
+                    font-weight: $text-weight
+
+            .times
+                p
+                    font-size: 3.5em
+                    text-align: center
+            
+            #main-layout      
+                .icon-info-channels  
+                    #icon-teams     
+                        text-align: center
+                        img
+                            transition: all 500ms
+                            width: 80%
+                            &:hover
+                                transform: scale(1.1)
+                        
+                    #icon-youtube            
+                        text-align: center
+                        img
+                            transition: all 500ms
+                            width: 70%
+                            &:hover
+                                transform: scale(1.1)
+
                 #button-register-layout
                     text-align: center
                     align-self: center
@@ -634,6 +666,7 @@ $shadow: 0px 0.5px 0.6px hsl(0deg 0% 62% / 0.3),0px 1.4px 1.6px -0.6px hsl(0deg 
         #social-networks-layout
             margin: 0px auto
             color: white
+            padding-top: 2% !important
 
             .title
                 text-align: center

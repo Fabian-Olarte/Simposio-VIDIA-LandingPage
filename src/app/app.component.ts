@@ -37,14 +37,13 @@ export class AppComponent implements AfterViewInit{
     this.minutes = this.minutes < 10 ? '0' + this.minutes : this.minutes;
     this.seconds = this.seconds < 10 ? '0' + this.seconds : this.seconds;
 
-    document.getElementById('days')!.innerText = this.days +" dias ";
-    document.getElementById('hours')!.innerText = this.hours +"H ";
-    document.getElementById('mins')!.innerText = this.minutes +"M ";
-    document.getElementById('seconds')!.innerText = this.seconds +"S ";
+    document.getElementById('days')!.innerText = this.days +" días";
+    document.getElementById('hours')!.innerText = this.hours +" horas";
+    document.getElementById('mins')!.innerText = this.minutes +" minutos";
+    document.getElementById('seconds')!.innerText = this.seconds +" segundos";
 
     setInterval(this.myTimer, 1000);
   }
-
 
 
   ngOnInit(){
@@ -57,7 +56,6 @@ export class AppComponent implements AfterViewInit{
     let logoToggle = document.getElementById('toggle-icon') as HTMLElement;
     let lastScroll = 0;
     
-
     window.addEventListener('scroll', function(){
       let scrollActual = window.scrollY;
     
@@ -72,10 +70,7 @@ export class AppComponent implements AfterViewInit{
             menu.style.top = "-100vh";
             logoToggle.style.filter = "invert(0%)"
             localStorage.setItem('menuActivated', 'false');
-
           }
-
-
 
         }
         else{
@@ -91,7 +86,6 @@ export class AppComponent implements AfterViewInit{
   ngAfterViewInit() {
     this.myTimer();
   }
-
 
   toggleMenu(){
     let menu = document.getElementById('menu-mobile') as HTMLElement;
