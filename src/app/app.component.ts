@@ -97,14 +97,14 @@ export class AppComponent implements AfterViewInit{
     if(boolean === 'false'){
       header.classList.toggle('menuActivated');
       menu.style.top = "calc(0vh + 90px)";
-      logoToggle.style.filter = "invert(100%)"
+      logoToggle.style.filter = "invert(100%)";
       localStorage.setItem('menuActivated', 'true');
     }
 
     else{
       header.classList.toggle('menuActivated');
       menu.style.top = "-150vh";
-      logoToggle.style.filter = "invert(0%)"
+      logoToggle.style.filter = "invert(0%)";
       localStorage.setItem('menuActivated', 'false');
     }
   }
@@ -118,7 +118,7 @@ export class AppComponent implements AfterViewInit{
     if(header.classList.contains('menuActivated')){
       header.classList.toggle('menuActivated');
       menu.style.top = "-150vh";
-      logoToggle.style.filter = "invert(0%)"
+      logoToggle.style.filter = "invert(0%)";
       localStorage.setItem('menuActivated', 'false');
     }
   }

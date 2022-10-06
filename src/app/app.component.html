@@ -1,5 +1,5 @@
 <header id="header">
-    <div class="container-layout container-fluid px-5">
+    <div class="container-layout container-fluid px-4">
         <div class="row justify-content-between">
 
             <div id="icon-layout-javeriana" class="col-5 col-sm-3 col-lg-2">
@@ -35,7 +35,7 @@
             </nav>
 
             <div id="button-register" class="col-3 col-lg-2 d-none d-lg-flex ">
-                <a id="button" href="#registro">Únete al evento</a>
+                <a id="button" (click)="scroll($event, 'registro')">Únete al evento</a>
             </div>
 
         </div>
@@ -49,8 +49,7 @@
             <div id="information" class="col-md-11 col-lg-6 ">
 
                 <div id="title-layout" class="row px-2">
-                    <h1 id="title" class="col">SIMPOSIO <span>VID<span
-                                style="color: rgba(71, 82, 235, 0.59); font-size: 1em">IA</span></span></h1>
+                    <h1 id="title" class="col">SIMPOSIO <span>VID<span id="temp">IA</span></span></h1>
                 </div>
 
                 <div id="description-layout" class="row px-2">
@@ -69,11 +68,11 @@
 
                 <div id="button-layout" class="row justify-content-around">
                     <div id="button-register-layout" class="col-lg-12 col-sm-6">
-                        <a id="button-register" class="w-75" href="#registro">Únete al evento</a>
+                        <a id="button-register" (click)="scroll($event, 'registro')">Únete al evento</a>
                     </div>
 
                     <div id="button-moreInfo-layout" class="col-lg-12 col-sm-6">
-                        <a id="button-moreInfo" class="w-75" href="#informacion">Conoce más</a>
+                        <a id="button-moreInfo" (click)="scroll($event, 'informacion')">Conoce más</a>
                     </div>
                 </div>
 
@@ -90,13 +89,7 @@
 
             <div id="main-layout" class="col-xl-6 col-lg-5 col-11">
                 <div id="title-layout" class="row">
-                    <h1 id="title">¿Por qué participar en el Simposio VID<span>IA</span>?</h1>
-                </div>
-
-                <div id="button-layout" class="row justify-content-center">
-                    <div id="button-speakers-layout" class="col-6">
-                        <a id="button-speakers" class="w-75" (click)="scroll($event, 'invitados')">Invitados</a>
-                    </div>
+                    <h1 id="title">¿Por qué participar en el Simposio <span>VIDIA?</span></h1>
                 </div>
             </div>
 
@@ -109,16 +102,9 @@
                     mundo real apoyándonos en las capacidades de cómputo de los dispositivos actuales. Este espacio de
                     encuentro está dispuesto para comunicar y dar a conocer a la importancia y relevancia de esta
                     temática en el ámbito de las ciencias de la salud, poniendo a su disposición los mejores expertos
-                    que darán a conocer su conocimiento y resultados de investigaciones.
+                    que darán a conocer su conocimiento y resultados de investigaciones. <a id="button-speakers" (click)="scroll($event, 'invitados')">Conoce a los invitados</a>
                 </p>
             </div>
-
-            <div id="button-mobile-layout" class="mobile-class-temporal d-none row justify-content-center">
-                <div id="button-speakers-mobile-layout" class="col-6">
-                    <a id="button-speakers-mobile" class="w-75" (click)="scroll($event, 'invitados')">Invitados</a>
-                </div>
-            </div>
-
         </div>
 
         <div id="footer-information-layout" class="mt-2">
@@ -146,6 +132,7 @@
             </div>
 
             <div id="speakers-layout" class="row justify-content-around mx-3">
+
                 <div class="card-container col-9 col-sm-5 col-md-5 col-lg-3 mx-1 my-4">
                     <div class="card">
                         <div class="f front">
@@ -202,10 +189,10 @@
                     <div class="card">
                         <div class="f front">
                             <img
-                                src="https://images-ext-1.discordapp.net/external/6j8iPPN5MYv4Xki-UHvS-mp8S_e8ey2j48aOqyw3nPk/https/pbs.twimg.com/profile_images/1391792314142666755/CXd-wQL0_400x400.jpg">
+                                src="https://cdn.discordapp.com/attachments/836628917275459654/1024874883529838632/WhatsApp_Image_2022-09-28_at_9.12.30_PM.jpeg">
                             <div class="card-body">
-                                <h5 class="card-title">Ángel Alfonso Cruz Roa, PhD.</h5>
-                                <p class="card-text">Profesor asistente de la Universidad de los Llanos</p>
+                                <h5 class="card-title">José Manuel Jerez, PhD.</h5>
+                                <p class="card-text">Catedrático de la Universidad de Málaga</p>
                                 <div class="more-info" (click)="rotate('1')">
                                     <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                             fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
@@ -222,79 +209,20 @@
                         <div class="f back">
                             <div class="card-back-body">
                                 <h5 class="card-title">Experiencia</h5>
-
                                 <ul>
-                                    <li>Ingeniero de Sistemas, Universidad de los Llanos, Villavicencio, Meta.</li>
-                                    <li>Máster en Ingeniería Biomédica, Universidad Nacional de Colombia, Bogotá,
-                                        Colombia.</li>
-                                    <li>Doctor en Ingeniería de Sistemas, y Computación, Universidad Nacional de
-                                        Colombia, Bogotá, Colombia.</li>
+                                    <li>Universidad de Málaga: PhD Ingeniería en Informática (Lenguajes y Ciencias de la
+                                        Computación)</li>
+                                    <li>Universidad Oberta de Cataluña: Máster en Bioinformática</li>
                                 </ul>
-
                                 <h5 class="card-title">Áreas de investigación</h5>
                                 <ul>
-                                    <li>Aprendizaje Automático.</li>
-                                    <li>Análisis de Imágenes.</li>
-                                    <li>Analítica de Datos.</li>
+                                    <li>Ingeniería informática, bioinformática, inteligencia computacional en bio
+                                        medicina</li>
+                                    <li>Director del grupo de investigación <a href="http://www.icb.uma.es/icb/"
+                                            target="_blank">(ICB)</a> Inteligencia Computacional y
+                                        Biomedicina</li>
                                 </ul>
-
                                 <div class="more-info" (click)="rotate('1')">
-                                    <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                            fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd"
-                                                d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
-                                        </svg></span>
-                                    <p>Volver</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-container col-9 col-sm-5 col-md-5 col-lg-3 mx-1 my-4">
-                    <div class="card">
-                        <div class="f front">
-                            <img
-                                src="https://images-ext-1.discordapp.net/external/juwbieKUR54Rce1dzi81u2dRws-5g70L7q_uKi81jUw/http/cormoran.uis.edu.co/eisi/images/mp/U5559/FMC3.png">
-                            <div class="card-body">
-                                <h5 class="card-title">Fabio Martínez Carrillo, PhD.</h5>
-                                <p class="card-text">Director de <a href="https://bivl2ab.uis.edu.co/"
-                                        target="_blank">BIVL2ab -
-                                        Biomedical Imaging</a>, Vision and Learning Laboratory</p>
-                                <div class="more-info" (click)="rotate('2')">
-                                    <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                            fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
-                                            <path
-                                                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                                            <path
-                                                d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
-                                        </svg></span>
-                                    <p>Mas información</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="f back">
-                            <div class="card-back-body">
-                                <h5 class="card-title">Experiencia</h5>
-
-                                <ul>
-                                    <li>Universidad de Pamplona – Pregrado Ingeniería Mecatrónica.</li>
-                                    <li>Universidad Nacional de Colombia – Magister en ingeniería biomédica,
-                                        Bioingeniería e ingeniería biomédica.</li>
-                                    <li>Universidad Nacional de Colombia – Doctor en ingeniería de sistemas y
-                                        computación, medical image analysis and video analysis.</li>
-                                </ul>
-
-                                <h5 class="card-title">Áreas de investigación</h5>
-                                <ul>
-                                    <li>Analítica de datos.</li>
-                                    <li>Inteligencia artificial.</li>
-                                    <li>Imágenes médicas.</li>
-                                    <li>Video Analytics.</li>
-                                </ul>
-
-                                <div class="more-info" (click)="rotate('2')">
                                     <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                             fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
                                             <path fill-rule="evenodd"
@@ -316,7 +244,7 @@
                                 <h5 class="card-title">Pablo Reyes, PhD.</h5>
                                 <p class="card-text">Investigador científico en el Hospital Universitario San Ignacio
                                 </p>
-                                <div class="more-info" (click)="rotate('3')">
+                                <div class="more-info" (click)="rotate('2')">
                                     <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                             fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
                                             <path
@@ -346,6 +274,55 @@
                                     <li>Neuroimágenes.</li>
                                 </ul>
 
+                                <div class="more-info" (click)="rotate('2')">
+                                    <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+                                        </svg></span>
+                                    <p>Volver</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-container col-9 col-sm-5 col-md-5 col-lg-3 mx-1 my-4">
+                    <div class="card">
+                        <div class="f front">
+                            <img
+                                src="https://media-exp1.licdn.com/dms/image/C4E03AQFM7CFdqJfclA/profile-displayphoto-shrink_400_400/0/1582778243265?e=1669852800&v=beta&t=ra0DRf6ui7COpNcnSpaOcMlU_tvGquv_MAk9Pq9jeJc">
+                            <div class="card-body">
+                                <h5 class="card-title">Leonardo Florez, PhD.</h5>
+                                <p class="card-text">Profesor titular Pontificia Universidad Javeriana</p>
+                                <div class="more-info" (click)="rotate('3')">
+                                    <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                            <path
+                                                d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                                        </svg></span>
+                                    <p>Mas información</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="f back">
+                            <div class="card-back-body">
+                                <h5 class="card-title">Experiencia</h5>
+                                <ul>
+                                    <li>Pregrado en ingeniería de sistemas y computación</li>
+                                    <li>Master en ingeniería de sistemas y computación</li>
+                                    <li>Maestría - Diplôme d'études approfondies - Images et Systèmes</li>
+                                    <li>Doctorado - Images et Systèmes</li>
+                                </ul>
+                                <h5 class="card-title">Áreas de investigación</h5>
+                                <ul>
+                                    <li>Procesamiento de imágenes </li>
+                                    <li>Visión computacional </li>
+                                    <li>Machine Learning </li>
+                                </ul>
                                 <div class="more-info" (click)="rotate('3')">
                                     <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                             fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
@@ -363,10 +340,10 @@
                     <div class="card">
                         <div class="f front">
                             <img
-                                src="https://media-exp1.licdn.com/dms/image/C4E03AQG3oBPf9dJnrg/profile-displayphoto-shrink_400_400/0/1650773759861?e=1669852800&v=beta&t=Hz_WUXjLsIsx6Nwn5oBujld_baVW0Lgoj-whOJrPN5E">
+                                src="https://cdn.discordapp.com/attachments/836628917275459654/1027418880391516171/unknown.png">
                             <div class="card-body">
-                                <h5 class="card-title">Oscar Martínez Bernal, MsC.</h5>
-                                <p class="card-text">Profesor – Pontificia Universidad Javeriana</p>
+                                <h5 class="card-title">Sandra Belalcázar Rey, MD.</h5>
+                                <p class="card-text">Médica Cirujana Universidad del Rosario</p>
                                 <div class="more-info" (click)="rotate('4')">
                                     <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                             fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
@@ -382,21 +359,20 @@
 
                         <div class="f back">
                             <div class="card-back-body">
-
                                 <h5 class="card-title">Experiencia</h5>
                                 <ul>
-                                    <li>Pontificia Universidad Javeriana – Pregrado en ingeniería electrónica.</li>
-                                    <li>Pontificia Universidad Javeriana – Máster en ingeniería electrónica.</li>
-                                    <li>Pontificia Universidad Javeriana – Máster en bioingeniería.</li>
+                                    <li>Oftalmóloga: Fundación Universitaria de Ciencias de la Salud. FUCS</li>
+                                    <li>Especialista en Glaucoma: Universidad Militar Nueva Granada</li>
+                                    <li>Jefe de la Clínica de Glaucoma Fundación Oftalmológica Nacional</li>
+                                    <li>Ex-Presidente de Grupo Colombiano de Trabajo Sobre Glaucoma - GlaucomaColombia</li>
+                                    <li>Miembro Sociedad Latinoamericana de Glaucoma</li>
                                 </ul>
                                 <h5 class="card-title">Áreas de investigación</h5>
                                 <ul>
-                                    <li>Procesamiento digital de señales biológicas.</li>
-                                    <li>Inteligencia artificial.</li>
-                                    <li>Neurociencia y Ciencia de datos.</li>
-                                    <li>Machine Learning y Big Data.</li>
+                                    <li>Inteligencia Artificial en diagnóstico de Glaucoma</li>
+                                    <li>Enfermedad por Cierre angular</li>
+                                    <li>Adherencia al tratamiento en Glaucoma</li>
                                 </ul>
-
                                 <div class="more-info" (click)="rotate('4')">
                                     <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                             fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
@@ -410,7 +386,7 @@
                     </div>
                 </div>
 
-                <div class="card-container col-9 col-sm-5 col-md-5 col-lg-3 mx-1 my-4">
+                <div class="card-container col-9 col-sm-5 col-md-5 col-lg-3 mx-1 my-4 d-none">
                     <div class="card">
                         <div class="f front">
                             <img
@@ -463,11 +439,171 @@
                     <div class="card">
                         <div class="f front">
                             <img
+                                src="https://images-ext-1.discordapp.net/external/juwbieKUR54Rce1dzi81u2dRws-5g70L7q_uKi81jUw/http/cormoran.uis.edu.co/eisi/images/mp/U5559/FMC3.png">
+                            <div class="card-body">
+                                <h5 class="card-title">Fabio Martínez Carrillo, PhD.</h5>
+                                <p class="card-text">Director de <a href="https://bivl2ab.uis.edu.co/"
+                                        target="_blank">BIVL2ab -
+                                        Biomedical Imaging</a>, Vision and Learning Laboratory</p>
+                                <div class="more-info" (click)="rotate('6')">
+                                    <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                            <path
+                                                d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                                        </svg></span>
+                                    <p>Mas información</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="f back">
+                            <div class="card-back-body">
+                                <h5 class="card-title">Experiencia</h5>
+
+                                <ul>
+                                    <li>Universidad de Pamplona – Pregrado Ingeniería Mecatrónica.</li>
+                                    <li>Universidad Nacional de Colombia – Magister en ingeniería biomédica,
+                                        Bioingeniería e ingeniería biomédica.</li>
+                                    <li>Universidad Nacional de Colombia – Doctor en ingeniería de sistemas y
+                                        computación, medical image analysis and video analysis.</li>
+                                </ul>
+
+                                <h5 class="card-title">Áreas de investigación</h5>
+                                <ul>
+                                    <li>Analítica de datos.</li>
+                                    <li>Inteligencia artificial.</li>
+                                    <li>Imágenes médicas.</li>
+                                    <li>Video Analytics.</li>
+                                </ul>
+
+                                <div class="more-info" (click)="rotate('6')">
+                                    <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+                                        </svg></span>
+                                    <p>Volver</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-container col-9 col-sm-5 col-md-5 col-lg-3 mx-1 my-4">
+                    <div class="card">
+                        <div class="f front">
+                            <img
+                                src="https://images-ext-1.discordapp.net/external/6j8iPPN5MYv4Xki-UHvS-mp8S_e8ey2j48aOqyw3nPk/https/pbs.twimg.com/profile_images/1391792314142666755/CXd-wQL0_400x400.jpg">
+                            <div class="card-body">
+                                <h5 class="card-title">Ángel Alfonso Cruz Roa, PhD.</h5>
+                                <p class="card-text">Profesor asistente de la Universidad de los Llanos</p>
+                                <div class="more-info" (click)="rotate('7')">
+                                    <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                            <path
+                                                d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                                        </svg></span>
+                                    <p>Mas información</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="f back">
+                            <div class="card-back-body">
+                                <h5 class="card-title">Experiencia</h5>
+
+                                <ul>
+                                    <li>Ingeniero de Sistemas, Universidad de los Llanos, Villavicencio, Meta.</li>
+                                    <li>Máster en Ingeniería Biomédica, Universidad Nacional de Colombia, Bogotá,
+                                        Colombia.</li>
+                                    <li>Doctor en Ingeniería de Sistemas, y Computación, Universidad Nacional de
+                                        Colombia, Bogotá, Colombia.</li>
+                                </ul>
+
+                                <h5 class="card-title">Áreas de investigación</h5>
+                                <ul>
+                                    <li>Aprendizaje Automático.</li>
+                                    <li>Análisis de Imágenes.</li>
+                                    <li>Analítica de Datos.</li>
+                                </ul>
+
+                                <div class="more-info" (click)="rotate('7')">
+                                    <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+                                        </svg></span>
+                                    <p>Volver</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-container col-9 col-sm-5 col-md-5 col-lg-3 mx-1 my-4">
+                    <div class="card">
+                        <div class="f front">
+                            <img
+                                src="https://media-exp1.licdn.com/dms/image/C4E03AQG3oBPf9dJnrg/profile-displayphoto-shrink_400_400/0/1650773759861?e=1669852800&v=beta&t=Hz_WUXjLsIsx6Nwn5oBujld_baVW0Lgoj-whOJrPN5E">
+                            <div class="card-body">
+                                <h5 class="card-title">Oscar Martínez Bernal, MsC.</h5>
+                                <p class="card-text">Profesor – Pontificia Universidad Javeriana</p>
+                                <div class="more-info" (click)="rotate('8')">
+                                    <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                            <path
+                                                d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                                        </svg></span>
+                                    <p>Mas información</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="f back">
+                            <div class="card-back-body">
+
+                                <h5 class="card-title">Experiencia</h5>
+                                <ul>
+                                    <li>Pontificia Universidad Javeriana – Pregrado en ingeniería electrónica.</li>
+                                    <li>Pontificia Universidad Javeriana – Máster en ingeniería electrónica.</li>
+                                    <li>Pontificia Universidad Javeriana – Máster en bioingeniería.</li>
+                                </ul>
+                                <h5 class="card-title">Áreas de investigación</h5>
+                                <ul>
+                                    <li>Procesamiento digital de señales biológicas.</li>
+                                    <li>Inteligencia artificial.</li>
+                                    <li>Neurociencia y Ciencia de datos.</li>
+                                    <li>Machine Learning y Big Data.</li>
+                                </ul>
+
+                                <div class="more-info" (click)="rotate('8')">
+                                    <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+                                        </svg></span>
+                                    <p>Volver</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-container col-9 col-sm-5 col-md-5 col-lg-3 mx-1 my-4">
+                    <div class="card">
+                        <div class="f front">
+                            <img
                                 src="https://media-exp1.licdn.com/dms/image/C4E03AQGFWAViqC2hrw/profile-displayphoto-shrink_400_400/0/1663432744721?e=1669852800&v=beta&t=lkrxgwWUHB32Ocpv8475ufXWqsd5wng1gYgTqf5fGqI">
                             <div class="card-body">
                                 <h5 class="card-title">Cecile Gauthier Umaña, MsC.</h5>
                                 <p class="card-text">Profesora de la Pontificia Universidad Javeriana.</p>
-                                <div class="more-info" (click)="rotate('6')">
+                                <div class="more-info" (click)="rotate('9')">
                                     <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                             fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
                                             <path
@@ -492,7 +628,7 @@
                                 <ul>
                                     <li>Ciencias Médicas y de la Salud, Medicina Básica y Neurociencias.</li>
                                 </ul>
-                                <div class="more-info" (click)="rotate('6')">
+                                <div class="more-info" (click)="rotate('9')">
                                     <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                             fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
                                             <path fill-rule="evenodd"
@@ -505,55 +641,6 @@
                     </div>
                 </div>
 
-                <div class="card-container col-9 col-sm-5 col-md-5 col-lg-3 mx-1 my-4">
-                    <div class="card">
-                        <div class="f front">
-                            <img
-                                src="https://cdn.discordapp.com/attachments/836628917275459654/1024874883529838632/WhatsApp_Image_2022-09-28_at_9.12.30_PM.jpeg">
-                            <div class="card-body">
-                                <h5 class="card-title">José Manuel Jerez, PhD.</h5>
-                                <p class="card-text">Catedrático de la Universidad de Málaga</p>
-                                <div class="more-info" (click)="rotate('7')">
-                                    <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                            fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
-                                            <path
-                                                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                                            <path
-                                                d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
-                                        </svg></span>
-                                    <p>Mas información</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="f back">
-                            <div class="card-back-body">
-                                <h5 class="card-title">Experiencia</h5>
-                                <ul>
-                                    <li>Universidad de Málaga: PhD Ingeniería en Informática (Lenguajes y Ciencias de la
-                                        Computación)</li>
-                                    <li>Universidad Oberta de Cataluña: Máster en Bioinformática</li>
-                                </ul>
-                                <h5 class="card-title">Áreas de investigación</h5>
-                                <ul>
-                                    <li>Ingeniería informática, bioinformática, inteligencia computacional en bio
-                                        medicina</li>
-                                    <li>Director del grupo de investigación <a href="http://www.icb.uma.es/icb/"
-                                            target="_blank">(ICB)</a> Inteligencia Computacional y
-                                        Biomedicina</li>
-                                </ul>
-                                <div class="more-info" (click)="rotate('7')">
-                                    <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                            fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd"
-                                                d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
-                                        </svg></span>
-                                    <p>Volver</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </article>
@@ -566,7 +653,9 @@
             </div>
 
             <div id="activities-layout" class="row justify-content-around">
-                <div class="col-11 col-sm-11 col-md-5 col-lg-5 mb-2">
+
+                <div class="col-12 col-md-5" >
+
                     <div class="activity-layout pb-4">
                         <h6 class="date">19 octubre 2022 - 17:00</h6>
                         <h5 class="name-activity">Discurso de apertura</h5>
@@ -574,60 +663,61 @@
                             Solano, Sc.D. Y la directora de investigación de la universidad, Alexandra Pomares Quimbaya,
                             Ph.D.</p>
                     </div>
-                </div>
 
-
-                <div class="col-11 col-sm-11 col-md-5 col-lg-5 mb-3">
-                    <div class="activity-layout pb-4">
-                        <h6 class="date">20 octubre 2022 - 17:00</h6>
-                        <h5 class="name-activity">Discurso de apertura</h5>
-                        <p class="description">Discurso de apertura del segundo día</p>
-                    </div>
-                </div>
-
-                <div class="col-11 col-sm-11 col-md-5 col-lg-5 mb-2">
                     <div class="activity-layout pb-4">
                         <h6 class="date">19 octubre 2022 - 17:10</h6>
                         <h5 class="name-activity">Aplicación de la IA al análisis de los RDW en salud y oncología.</h5>
                         <p class="description">A cargo de José Manuel Jerez, PhD.</p>
                     </div>
-                </div>
 
-                <div class="col-11 col-sm-11 col-md-5 col-lg-5 mb-3">
-                    <div class="activity-layout pb-4">
-                        <h6 class="date">20 octubre 2022 - 17:10</h6>
-                        <h5 class="name-activity">Tema por confirmar</h5>
-                        <p class="description">A cargo de Leonardo Florez, PhD.</p>
-                    </div>
-                </div>
-
-
-                <div class="col-11 col-sm-11 col-md-5 col-lg-5 mb-3">
                     <div class="activity-layout pb-4">
                         <h6 class="date">19 octubre 2022 - 18:10</h6>
                         <h5 class="name-activity">Aprendizaje de máquina como apoyo al diagnóstico de imágenes médicas
                         </h5>
                         <p class="description">A cargo de Andrea del Pilar Rueda Olarte, Ph.D.</p>
                     </div>
-                </div>
 
-                <div class="col-11 col-sm-11 col-md-5 col-lg-5 mb-3">
-                    <div class="activity-layout pb-4">
-                        <h6 class="date">20 octubre 2022 - 18:10</h6>
-                        <h5 class="name-activity">IA aplicado a neurociencias </h5>
-                        <p class="description">A cargo de Cecile Gauthier, MsC.</p>
-                    </div>
-                </div>
-
-                <div class="col-11 col-sm-11 col-md-5 col-lg-5 mb-3">
                     <div class="activity-layout pb-4">
                         <h6 class="date">19 octubre 2022 - 19:10</h6>
                         <h5 class="name-activity">Tema por confirmar</h5>
                         <p class="description">A cargo de Ángel Alfonso Cruz Roa, PhD.</p>
                     </div>
+
+                    <div class="activity-layout pb-4">
+                        <h6 class="date">19 octubre 2022 - 20:10</h6>
+                        <h5 class="name-activity">Representaciones profundas como mecanismo para el desarrollo de
+                            herramientas de soporte al diagnóstico en salud </h5>
+                        <p class="description">A cargo de Fabio Martínez Carrillo, PhD.</p>
+                    </div>
+
+                    <div class="activity-layout pb-4">
+                        <h6 class="date">19 octubre 2022 - 21:10</h6>
+                        <h5 class="name-activity">Discurso de cierre</h5>
+                        <p class="description">Cierre del primer día</p>
+                    </div>              
+
                 </div>
 
-                <div class="col-11 col-sm-11 col-md-5 col-lg-5 mb-3">
+                <div class="col-12 col-md-5">
+
+                    <div class="activity-layout pb-4">
+                        <h6 class="date">20 octubre 2022 - 17:00</h6>
+                        <h5 class="name-activity">Discurso de apertura</h5>
+                        <p class="description">Discurso de apertura del segundo día</p>
+                    </div>
+
+                    <div class="activity-layout pb-4">
+                        <h6 class="date">20 octubre 2022 - 17:10</h6>
+                        <h5 class="name-activity">Inteligencia artificial para la Determinación del Daño del Nervio óptico por Glaucoma</h5>
+                        <p class="description">A cargo de Leonardo Florez, PhD, Sandra Belalcázar Rey, MD.</p>
+                    </div>
+
+                    <div class="activity-layout pb-4">
+                        <h6 class="date">20 octubre 2022 - 18:10</h6>
+                        <h5 class="name-activity">IA aplicado a neurociencias </h5>
+                        <p class="description">A cargo de Cecile Gauthier, MsC.</p>
+                    </div>
+
                     <div class="activity-layout pb-4">
                         <h6 class="date">20 octubre 2022 - 19:10</h6>
                         <h5 class="name-activity">Predicción de tiempo quirúrgico mediante algoritmos de aprendizaje de
@@ -635,43 +725,20 @@
                             físicos hospitalarios</h5>
                         <p class="description">A cargo de Oscar Martínez Bernal, MsC.</p>
                     </div>
-                </div>
 
-                <div class="col-11 col-sm-11 col-md-5 col-lg-5 mb-3">
-                    <div class="activity-layout pb-4">
-                        <h6 class="date">19 octubre 2022 - 20:10</h6>
-                        <h5 class="name-activity">Representaciones profundas como mecanismo para el desarrollo de
-                            herramientas de soporte al diagnóstico en salud </h5>
-                        <p class="description">A cargo de Fabio Martínez Carrillo, PhD.</p>
-                    </div>
-                </div>
-
-                <div class="col-11 col-sm-11 col-md-5 col-lg-5 mb-3">
                     <div class="activity-layout pb-4">
                         <h6 class="date">20 octubre 2022 - 20:10</h6>
                         <h5 class="name-activity">Retos en la implementación de la IA en imágenes médicas: de la
                             eficiencia a la confianza.</h5>
                         <p class="description">A cargo de Pablo Reyes, PhD.</p>
                     </div>
-                </div>
 
-                <div class="col-11 col-sm-11 col-md-5 col-lg-5 mb-2">
-                    <div class="activity-layout pb-4">
-                        <h6 class="date">19 octubre 2022 - 21:10</h6>
-                        <h5 class="name-activity">Discurso de cierre</h5>
-                        <p class="description">Cierre del primer día</p>
-                    </div>
-                </div>
-
-
-                <div class="col-11 col-sm-11 col-md-5 col-lg-5 mb-2">
                     <div class="activity-layout pb-4">
                         <h6 class="date">20 octubre 2022 - 21:10</h6>
                         <h5 class="name-activity">Discurso de cierre</h5>
                         <p class="description">Cierre del evento</p>
-                    </div>
+                    </div>      
                 </div>
-
             </div>
         </div>
     </article>
@@ -791,7 +858,7 @@
 
                                 <div class="member">
                                     <img class="member-img" src="https://drive.google.com/uc?export=view&id=1mY7eixbXLCa60Z8m8lR5JoI5cZ1tpJ5n">
-                                    <h3 class="member-name">Julian Carillo</h3>
+                                    <h3 class="member-name">Julian Carrillo</h3>
                                 </div>
 
                                 <div class="member">
@@ -859,9 +926,11 @@
                                 </div>
 
                                 <div class="member">
-                                    <img class="member-img" src="https://drive.google.com/uc?export=view&id=1aBjc373e2nnkayl7tUnfpT3JYe6SR0lT">
-                                    <h3 class="member-name">Abril Cano Castro</h3>
+                                    <img class="member-img" src="https://drive.google.com/uc?export=view&id=1Gv6AZ4fwnpi5-3EeOQm5aiBQvXUi0RRW">
+                                    <h3 class="member-name">Nicolas Ramos Bohorquez</h3>
                                 </div>
+
+
                             </div>
 
                             <div class="row justify-content-center">
@@ -872,7 +941,7 @@
 
                                 <div class="member">
                                     <img class="member-img" src="https://drive.google.com/uc?export=view&id=1aBjc373e2nnkayl7tUnfpT3JYe6SR0lT">
-                                    <h3 class="member-name">Nicolás Ramos</h3>
+                                    <h3 class="member-name">Abril Cano Castro</h3>
                                 </div>
                             </div>
                         </div>
@@ -929,8 +998,8 @@
                             <div class="row justify-content-around">
 
                                 <div class="member">
-                                    <img class="member-img" src="https://drive.google.com/uc?export=view&id=1aBjc373e2nnkayl7tUnfpT3JYe6SR0lT">
-                                    <h3 class="member-name">Maria Jose Niño</h3>
+                                    <img class="member-img" src="https://drive.google.com/uc?export=view&id=1MBzsd9vAu0LG1VtVTfBcaagfqeEEHBQ0">
+                                    <h3 class="member-name">Maria José Niño</h3>
                                 </div>
 
                                 <div class="member">
@@ -967,7 +1036,7 @@
 
                                 <div class="member">
                                     <img class="member-img" src="https://drive.google.com/uc?export=view&id=1hF3eHHSA451toESZIZEoFZQwWvny2EbD">
-                                    <h3 class="member-name">Mateo Johan Rosero</h3>
+                                    <h3 class="member-name">Johan Mateo Rosero</h3>
                                 </div>
 
                                 <div class="member">
@@ -990,7 +1059,7 @@
                                 </div>
 
                                 <div class="member">
-                                    <img class="member-img" src="https://drive.google.com/uc?export=view&id=1aBjc373e2nnkayl7tUnfpT3JYe6SR0lT">
+                                    <img class="member-img" src="https://drive.google.com/uc?export=view&id=1r3R8Kjmu7cz6khn29Y--fSbN1sK3wbBu">
                                     <h3 class="member-name">Diana Sofía Carrillo</h3>
                                 </div>
 
@@ -1064,13 +1133,13 @@
                             <div class="row justify-content-center">
 
                                 <div class="member">
-                                    <img class="member-img" src="https://drive.google.com/uc?export=view&id=1aBjc373e2nnkayl7tUnfpT3JYe6SR0lT">
-                                    <h3 class="member-name">Camilo Bustos</h3>
+                                    <img class="member-img" src="https://drive.google.com/uc?export=view&id=1mQ9Kl3T0yth75C7dMWbzPEQiKoT3f7pS">
+                                    <h3 class="member-name">Santiago Quintana</h3>
                                 </div>
 
                                 <div class="member">
                                     <img class="member-img" src="https://drive.google.com/uc?export=view&id=1aBjc373e2nnkayl7tUnfpT3JYe6SR0lT">
-                                    <h3 class="member-name">Santiago Quintana</h3>
+                                    <h3 class="member-name">Camilo Bustos</h3>
                                 </div>
 
                             </div>
@@ -1094,16 +1163,16 @@
                     nuestros canales de información para que este siempre informado.</p>
             </div>
 
-            <div class="times row pt-4">
-                <p class="numbers col-3" id="days"></p>
-                <p class="numbers col-3" id="hours"></p>
-                <p class="numbers col-3" id="mins"></p>
-                <p class="numbers col-3" id="seconds"></p>
+            <div class="times row justify-content-center">
+                <p class="numbers col-2" id="days"></p>
+                <p class="numbers col-2" id="hours"></p>
+                <p class="numbers col-2" id="mins"></p>
+                <p class="numbers col-2" id="seconds"></p>
             </div>
 
             <div id="main-layout" class="row justify-content-center py-2">
 
-                <div id="icon-layout" class="col-12 col-md-6">
+                <div id="icon-layout" class="col-12 col-sm-6">
                     <div class="icon-info-channels row justify-content-center">
                         <a id="icon-teams" class="icon col-6"
                             href="https://teams.microsoft.com/l/meetup-join/19%3aqWc7Tv158Goi1uL8zlJgM9xc0XnbVpuZK_fdPZD4rY81%40thread.tacv2/1664331658659?context=%7b%22Tid%22%3a%22daf7990e-8a3f-409c-9b76-2a5475098000%22%2c%22Oid%22%3a%22899acdbf-5e0e-479c-a73a-46a85c2a0953%22%7d"
@@ -1118,7 +1187,7 @@
                     </div>
                 </div>
 
-                <div id="icon-layout" class="col-12 col-md-6 row">
+                <div id="icon-layout" class="col-12 col-sm-6 row">
                     <div id="icon-javeriana-layout" class="col">
                         <img id="icon-javeriana" src="../assets/icons/icon-javeriana-2.svg">
                     </div>

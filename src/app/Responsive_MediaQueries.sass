@@ -23,7 +23,7 @@
 @media (max-width: 991px)        
     *
         font-size: 9px 
-
+    
 
     .menuActivated
         background: $secundary-color
@@ -120,6 +120,7 @@
                             #button-register        
                                 @include style-buttom(10px, 1.5em)            
                                 font-size: 2.5em 
+                                width: 85%
                                 
                         
                         #button-moreInfo-layout      
@@ -127,6 +128,7 @@
                             #button-moreInfo
                                 @include style-buttom(10px, 1.5em)          
                                 font-size: 2.5em 
+                                width: 85%
 
                 
                 #icon-main-layout
@@ -230,6 +232,7 @@
 
 
         #equipos
+          
             .container-layout
 
                 #title-layout
@@ -238,6 +241,10 @@
                     #title
                         text-align: center
                         font-size: 3.5em
+
+                #teams-info
+                    p
+                        text-align: center
 
                 .main-layout
                     padding-left: 2vw
@@ -300,25 +307,29 @@
                 
                 .times
                     p
-                        font-size: 2.3em
+                        font-size: 1.8em
 
-                #main-layout
-                    #button-register-layout        
-                        align-items: center
-                        padding: 0px                 
-
-                        #button-register  
-                            @include style-buttom(10px, 2em)
+                #main-layout      
+                    .icon-info-channels  
+                        #icon-teams     
+                            img
+                                width: 90%
+                       
                             
-
+                        #icon-youtube                 
+                            img
+                                width: 80%
+                            
                     #icon-layout
-                        #icon-javeriana-layout
+                        #icon-javeriana-layout                    
                             #icon-javeriana
-                                width: 75%
+                                width: 70%
+
 
                         #icon-main-layout
+                            padding-left: 25px
                             #icon-main
-                                width: 100%
+                                width: 93%
 
   
     #footer
@@ -403,32 +414,11 @@
                                         padding-top: 15%
                                         font-size: 1.6em
 
-
         #registro
             .container-layout
                 #title-layout
                     #title
                         font-size: 4em
-
-                #main-layout 
-                    #button-register-layout
-                        #button-register
-                            @include style-buttom(10px, 3em)
-                            padding: 1em
-                            padding-left: 0.1em
-                            padding-right: 0.1em
-                            
-
-                    #icon-layout
-                        padding-top: 5vh
-                        #icon-javeriana-layout
-                            #icon-javeriana
-                                width: 40%
-
-                        #icon-main-layout
-                            #icon-main
-                                width: 60%
-
     
     #footer
         .container-layout
@@ -459,11 +449,13 @@
                             #button-register          
                                 padding-left: 0.3em
                                 padding-right: 0.3em
+                                width: 100%
                                         
                         #button-moreInfo-layout 
                             #button-moreInfo
                                 padding-left: 0.3em
                                 padding-right: 0.3em
+                                width: 100%
 
 
         #informacion 
@@ -533,7 +525,34 @@
             .container-layout
                 .times
                     p
-                        font-size: 1.6em
+                        font-size: 1.7em
+
+                #main-layout      
+                    .icon-info-channels  
+                        padding-bottom: 10%
+                        #icon-teams    
+                            text-align: end 
+                             
+                            img
+                                width: 50%
+                       
+                            
+                        #icon-youtube    
+                            text-align: start             
+                            img
+                                width: 40%
+                            
+                    #icon-layout
+                        #icon-javeriana-layout     
+                                          
+                            #icon-javeriana
+                                width: 40%
+
+
+                        #icon-main-layout
+                            
+                            #icon-main
+                                width: 57%
                         
 
 @media (max-width: 380px)        

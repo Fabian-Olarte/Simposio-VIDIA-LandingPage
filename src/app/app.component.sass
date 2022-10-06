@@ -54,7 +54,6 @@ $shadow: 0px 0.5px 0.6px hsl(0deg 0% 62% / 0.3),0px 1.4px 1.6px -0.6px hsl(0deg 
     font-size: 10px
 
 
-
 //Main Styles
 #header 
     box-shadow: $shadow
@@ -65,6 +64,7 @@ $shadow: 0px 0.5px 0.6px hsl(0deg 0% 62% / 0.3),0px 1.4px 1.6px -0.6px hsl(0deg 
     width:100%
     z-index: 10
     transition: all 0.2s
+   
 
     .container-layout
         max-width: 1328px
@@ -95,13 +95,13 @@ $shadow: 0px 0.5px 0.6px hsl(0deg 0% 62% / 0.3),0px 1.4px 1.6px -0.6px hsl(0deg 
                         a 
                             text-decoration: none
                             color: #8A8A8A 
-                            font-size: 1.7em
+                            font-size: 1.8em
                             font-weight: $text-weight
-                            transition: all 0.2s
+                            transition: all 100ms
 
                             &:hover
-                                color: #000000
-                                font-size: 1.75em
+                                color: $secundary-color
+                                font-size: 1.95em
 
             #button-register 
                 @include flex-center
@@ -140,6 +140,10 @@ $shadow: 0px 0.5px 0.6px hsl(0deg 0% 62% / 0.3),0px 1.4px 1.6px -0.6px hsl(0deg 
                         span 
                             color: #0f3561
                             font-size: 1.2em
+
+                            #temp
+                                color: rgba(71, 82, 235, 0.59)
+                                font-size: 1em
                                   
                 #description-layout
                     width: 100%
@@ -168,6 +172,7 @@ $shadow: 0px 0.5px 0.6px hsl(0deg 0% 62% / 0.3),0px 1.4px 1.6px -0.6px hsl(0deg 
                         #button-register         
                             @include style-buttom(10px, 2.5em)
                             @include gradient-background-blue
+                            width: 50%
                                     
                     #button-moreInfo-layout 
                         text-align: center  
@@ -175,6 +180,7 @@ $shadow: 0px 0.5px 0.6px hsl(0deg 0% 62% / 0.3),0px 1.4px 1.6px -0.6px hsl(0deg 
                         #button-moreInfo
                             @include gradient-background-green 
                             @include style-buttom(10px, 2.5em)
+                            width: 50%
 
 
             #icon-main-layout
@@ -202,6 +208,9 @@ $shadow: 0px 0.5px 0.6px hsl(0deg 0% 62% / 0.3),0px 1.4px 1.6px -0.6px hsl(0deg 
                         span
                             font-size: 1em
                             color: #0f3561
+                            border-bottom: 8px solid rgba(71, 82, 235, 0.59)
+
+                         
 
                 #button-layout
                     margin-top: 30%
@@ -221,6 +230,15 @@ $shadow: 0px 0.5px 0.6px hsl(0deg 0% 62% / 0.3),0px 1.4px 1.6px -0.6px hsl(0deg 
                     font-size: 2.5em
                     font-weight: $text-weight
                     text-align: justify
+
+                    #button-speakers
+                        font-size: 1em
+                        color: $secundary-color
+                        font-weight: 400
+                        text-decoration: underline
+
+                        &:hover
+                            cursor: pointer
                 
 
         #footer-information-layout
@@ -457,6 +475,7 @@ $shadow: 0px 0.5px 0.6px hsl(0deg 0% 62% / 0.3),0px 1.4px 1.6px -0.6px hsl(0deg 
                         font-weight: 700
                     
                     .description
+                        text-align: justify
                         font-size: 2.2em
                         font-weight: 300
 
@@ -482,6 +501,7 @@ $shadow: 0px 0.5px 0.6px hsl(0deg 0% 62% / 0.3),0px 1.4px 1.6px -0.6px hsl(0deg 
                 p
                     font-size: 2.5em
                     font-weight: 200
+                    
 
             .main-layout
                 display: grid
@@ -593,8 +613,10 @@ $shadow: 0px 0.5px 0.6px hsl(0deg 0% 62% / 0.3),0px 1.4px 1.6px -0.6px hsl(0deg 
                     font-weight: $text-weight
 
             .times
+                padding-bottom: 3%
+                padding-top: 3%
                 p
-                    font-size: 3.5em
+                    font-size: 3em
                     text-align: center
             
             #main-layout      
@@ -614,17 +636,6 @@ $shadow: 0px 0.5px 0.6px hsl(0deg 0% 62% / 0.3),0px 1.4px 1.6px -0.6px hsl(0deg 
                             width: 70%
                             &:hover
                                 transform: scale(1.1)
-
-                #button-register-layout
-                    text-align: center
-                    align-self: center
-
-                    #button-register
-                        font-size: 2em
-                        @include style-buttom(10px, 2em)
-                        width: 35%
-                        @include gradient-background-blue
-
 
                 #icon-layout
 
