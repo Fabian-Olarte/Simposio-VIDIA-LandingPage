@@ -21,9 +21,10 @@ export class AppComponent implements AfterViewInit{
 
   myTimer() {
     this.currentDate = new Date();
-    this.targetDate = new Date(2022, 9, 19);
+    this.targetDate = new Date(2022, 9, 19, 17);
     this.cDateMillisecs = this.currentDate.getTime();
     this.tDateMillisecs = this.targetDate.getTime();
+    
     this.difference = this.tDateMillisecs - this.cDateMillisecs;
     this.seconds = Math.floor(this.difference / 1000);
     this.minutes = Math.floor(this.seconds / 60);
